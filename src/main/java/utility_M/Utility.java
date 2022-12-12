@@ -21,6 +21,11 @@ public class Utility {
 		File myfile= new File("E:\\velocity_Testing\\ExcelStudy.xlsx");
 		String value = WorkbookFactory.create(myfile).getSheet("Sheet3").getRow(row).getCell(cell).getStringCellValue();
 		Reporter.log("reading data from excel", true);
+		
+		
+		
+		
+		
 		return value;
 		
 	}
