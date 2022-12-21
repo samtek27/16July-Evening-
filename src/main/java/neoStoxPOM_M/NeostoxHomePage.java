@@ -29,11 +29,11 @@ public void handlePopUp(WebDriver driver)
 {
 	if(okButton.isDisplayed())
 	{
-	Utility.waittime(driver, 5000);
+	Utility.waittime(driver, 9000);
 	okButton.click();
-	Reporter.log("Clicking on OK button of Popup", true);
+	//Reporter.log("Clicking on OK button of Popup", true);
 	
-	Utility.waittime(driver, 5000);
+	Utility.waittime(driver, 9000);
 	closeButton.click();
 	Reporter.log("Clicking on Close button of Popup", true);
 	}
@@ -62,7 +62,7 @@ public void handlePopUp(WebDriver driver)
 	{
 		Utility.waittime(driver, 5000);
         String AccountBalance=AccBalance.getText();
-        Reporter.log("Actual Balance is"+AccountBalance, true);
+      Reporter.log("Actual Balance is"+AccountBalance, true);
         return AccountBalance;		
 	}
 	

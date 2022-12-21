@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
 
+
 public class Utility {
 	
 	public static String readDataFromExcel(int row, int cell) throws EncryptedDocumentException, IOException
@@ -51,7 +52,7 @@ public class Utility {
 public static void waittime(WebDriver driver, int waitTime)
 {
 	driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
-		  Reporter.log("Waiting for"+waitTime+"ms", true);
+		 Reporter.log("Waiting for"+waitTime+"ms", true);
 
 
 

@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import neoStoxBase_M.Base;
+import neoStoxBase_M.Base2;
 import neoStoxPOM_M.NeostoxHomePage;
 import neoStoxPOM_M.NeostoxLoginPage;
 import neoStoxPOM_M.NeostoxPasscodePage;
@@ -19,7 +19,7 @@ import utility_M.Utility;
 
 
 
-public class ValidateNeoStoxAccBalance extends Base {
+public class ValidateNeoStoxAccBalance extends Base2 {
 	NeostoxPasscodePage password;
 	NeostoxLoginPage login;
 	NeostoxHomePage home;
@@ -41,7 +41,7 @@ public class ValidateNeoStoxAccBalance extends Base {
 		login.clickonSignInButton(driver);
 		Utility.waittime(driver, 2000);
 		password.enterYourPassword(driver, Utility.readDataFromExcel(2,0));
-		Thread.sleep(2000);
+		Thread.sleep(9000);
 		password.clickOnSubmitButton(driver);
 		Thread.sleep(9000);
 		home.handlePopUp(driver);
@@ -72,8 +72,9 @@ public class ValidateNeoStoxAccBalance extends Base {
   
   
  @AfterMethod
- public void logOutFromNeoStox()
+ public void logOutFromNeoStox() throws InterruptedException
  {
+	 Thread.sleep(10000);
 	 home.logOut(driver);
  }
 

@@ -3,7 +3,7 @@ package neoStoxBase_M;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Base {
+public class Base2 {
 
 //Here write down all browser launch and close methods.
  protected static WebDriver driver;
